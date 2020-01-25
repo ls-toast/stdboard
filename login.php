@@ -10,7 +10,8 @@ $res=mysqli_query($con, $chk_qry);
 if(!$res)
     echo "ID ERROR";
 $row=mysqli_fetch_array($res);
-if($pw == $row['pw'])
+
+if($pw == $row['PW'])
     echo "LOGIN SUCCESS!";
 else
     echo "PASSWORD ERROR!";
