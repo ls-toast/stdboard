@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "./common.php";
 
 $id = $_GET['id'];
@@ -19,7 +18,8 @@ if($pw == $row['PW'])
     $_SESSION['id']=$id;
     echo "<script> alert(\"HELLO ";
     echo $id;
-    echo "\")</script>";
+    echo "\");";
+    echo "location.href='./board.php';</script>";
 }
 else
 {
