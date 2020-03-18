@@ -1,8 +1,18 @@
 <?php
 include "./common.php";
 
-$id = $_GET['id'];
-$pw = $_GET['password'];
+if(isset($_POST['id']) && isset($_POST['password']))
+{
+	$id = $_POST['id'];
+	$pw = $_POST['password'];
+}
+
+if(!isset($_POST['id']) || !isset($_POST['password']))
+{
+	echo "<script> alert(\"ID or PW is empty!\");";
+	echo "location.href='./main.html';</script>";
+	exit();
+}
 
 $chk_qry="SELECT * FROM users where id='$id'";
 $res=mysqli_query($con, $chk_qry);
