@@ -9,6 +9,7 @@ $row = mysqli_fetch_array($result);
 if($id == $row['id'] && $pw == $row['pw'])
 {
 	echo "<script>alert('HELLO $id!'); location.href='./menu.html';</script>";
+	$_SESSION["SESSION"]=$id;
 }
 else
 	echo "LOGIN FAILED!";
