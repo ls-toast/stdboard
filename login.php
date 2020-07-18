@@ -8,10 +8,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 if($id == $row['id'] && $pw == $row['pw'])
 {
-	echo "ID : ".$row['id']."</br>";
-	echo "PW : ".$row['pw']."</br>";
-	echo "NICKNAME : ".$row['nickname']."</br>";
-	echo "DESC : ".$row['description']."</br>";
+	echo "<script>alert('HELLO $id!'); location.href='./menu.html';</script>";
 }
 else
 	echo "LOGIN FAILED!";
