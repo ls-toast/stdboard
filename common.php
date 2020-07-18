@@ -1,7 +1,5 @@
 <?php
 $conn = mysqli_connect('localhost','toast','toor','stdboard');
-if($conn)
-	echo "CONNECTION SUCCESS!";
-else
+if(!$conn)
 	echo "CONNECTION FAIL!";
 ?>
